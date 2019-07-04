@@ -1,0 +1,127 @@
+{
+  "name": "credits_cards",
+  "module_type": "general",
+  "fields": {
+    "fields": {
+      "user_id": {
+        "toObject": "users"
+      },
+      "name": {
+        "default": ""
+      },
+      "number": {
+        "notEmpty": true,
+        "errorMessage": "numberRequired"
+      },
+      "type": {
+        "notEmpty": true,
+        "errorMessage": "typeRequired"
+      },
+      "tokens": {
+        "array": true
+      },
+      "tokens+provider": {
+        "notEmpty": true,
+        "errorMessage": "tokensProviderRequired"
+      },
+      "tokens+token": {
+        "notEmpty": true,
+        "errorMessage": "tokensTokenRequired"
+      },
+      "is_blocked": {
+        "default": false
+      },
+      "active": {
+        "default": true
+      },
+      "verification": {
+        "object": true
+      },
+      "verification-order_id": {
+        "optional": true
+      },
+      "verification-reference_code": {
+        "optional": true
+      },
+      "verification-auth_code": {
+        "optional": true
+      },
+      "verification-status": {
+        "optional": true
+      },
+      "verification-status_id": {
+        "optional": true
+      },
+      "verification-value": {
+        "optional": true
+      },
+      "verification-response_code": {
+        "optional": true
+      },
+      "verification-message": {
+        "optional": true
+      },
+      "verification-provider": {
+        "optional": true
+      },
+      "verification-date": {
+        "optional": true
+      },
+      "owner": {
+        "object": true
+      },
+      "owner-firstname": {
+        "optional": true
+      },
+      "owner-lastname": {
+        "optional": true
+      },
+      "owner-email": {
+        "optional": true,
+        "errorMessage": "emailRequired",
+        "isEmail": {
+          "errorMessage": "emailNotValid"
+        }
+      },
+      "owner-phone": {
+        "optional": true
+      },
+      "owner-id_number": {
+        "optional": true
+      }
+    },
+    "fields_type": {
+      "user_id": "TO",
+      "name": "S",
+      "number": "S",
+      "type": "S",
+      "tokens": "A",
+      "tokens+provider": "S",
+      "tokens+token": "S",
+      "is_blocked": "B",
+      "active": "B",
+      "verification": "O",
+      "verification-order_id": "S",
+      "verification-reference_code": "S",
+      "verification-auth_code": "S",
+      "verification-status": "S",
+      "verification-status_id": "S",
+      "verification-value": "N",
+      "verification-response_code": "S",
+      "verification-message": "S",
+      "verification-provider": "S",
+      "verification-date": "D",
+      "owner": "O",
+      "owner-firstname": "S",
+      "owner-lastname": "S",
+      "owner-email": "S",
+      "owner-phone": "S",
+      "owner-id_number": "S"
+    },
+    "keys": {
+      "user_id": "INDEX",
+      "alliance_id": "INDEX",
+      "cost_center_id": "INDEX"
+    }
+  }
+}
